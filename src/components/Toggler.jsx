@@ -6,7 +6,7 @@ export function Toggler({ }) {
     
     return (
     <div className="fixed text-sm bottom-[3.3rem] invisible sm:visible z-20 -left-4 flex flex-col gap-16">
-        <div className="theme-btn dark-toggler bottom-20 ">
+        <div className="theme-btn dark-toggler bottom-20">
             DARK
             <span className="box bg-white dark:bg-black border-black dark:border-white"></span>
         </div>

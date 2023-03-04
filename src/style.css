@@ -45,7 +45,7 @@ body{
     @apply min-h-[calc(100vh-4rem)];
 }
 .project-item{
-    @apply w-full h-96 sm:h-32 border-b border-black dark:border-white uppercase text-7xl sm:text-3xl flex items-center;
+    @apply w-full h-96 sm:h-28 border-b border-black dark:border-white uppercase text-4xl sm:text-3xl flex items-center;
 }
 .projects li{
     transition: opacity 0.5s;

@@ -8,7 +8,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        "display": ['Playfair Display', "serif"]
+        "display": ['Playfair Display', "serif"],
+        "source": ['Source Sans Pro','sans-serif']
       }
     },
   },
