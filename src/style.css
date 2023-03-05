@@ -17,6 +17,7 @@ html {
     
     font-size: 1vw;
     scrollbar-width: none;
+    background-color: black;
 }
 html > *{
     transition: color .5s;

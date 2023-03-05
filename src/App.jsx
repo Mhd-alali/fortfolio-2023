@@ -7,6 +7,8 @@ import { NavBar } from './components/NavBar';
 import { Projects } from './components/Projects';
 import { Toggler } from './components/Toggler';
 import { lerp } from './animation';
+import { Suspense } from 'react';
+import { useProgress } from '@react-three/drei';
 
 function App() {
     const scrollArea = useRef(null)
@@ -21,7 +23,6 @@ function App() {
         }
         tick()
     }, [])
-
     return (
         <>
             <Toggler />
@@ -34,6 +35,7 @@ function App() {
                     <Contact />
                 </main>
             </div>
+
         </>
 
     );
