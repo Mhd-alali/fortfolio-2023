@@ -17,5 +17,5 @@ export function Contact({ }) {
 }
 
 function Input({ placeholder , type }) {
-    return <input className="text-3xl font-source placeholder:font-source placeholder:text-2xl placeholder:font-thin block p-2 outline-none bg-transparent border-b w-full" type={type} placeholder={placeholder} />
+    return <input className="text-3xl font-source placeholder:font-source placeholder:text-2xl placeholder:font-thin block p-2 outline-none bg-transparent border-b w-full" type={type} spellCheck={false} placeholder={placeholder} />
 }

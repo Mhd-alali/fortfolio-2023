@@ -12,11 +12,7 @@ export const perspective = 600
 const fov = 2. * Math.atan((innerHeight / 2) / perspective) * (180 / Math.PI)
 
 function Loader() {
-    const {active, progress, errors, item, loaded, total} = useProgress()
-
-    return <Canvas>
-        <Html center>{progress} % loaded</Html>
-    </Canvas>
+    return <p className='absolute left-1/2 top-1/2'>loading ...</p>
 }
 
 root.render(

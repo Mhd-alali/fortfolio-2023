@@ -14,15 +14,15 @@ export default function Experience() {
     const planeRef = useRef(null)
     const ImageRef = useRef(null)
 
-    useEffect(()=>{
+    useEffect(() => {
         var theme = localStorage.getItem('theme')
         if (theme) {
             toggleTheme(theme)
         }
-        else{
+        else {
             toggleTheme('dark')
         }
-    },[])
+    }, [])
 
     useIntersectionObserver({ element: document.querySelector(".hero"), threshold: .7 },
         () => {
@@ -34,20 +34,21 @@ export default function Experience() {
             gsap.to(sphereRef.current.scale, { x: innerHeight * .05, y: innerHeight * .05, z: innerHeight * .05, ease: "power2.inOut", duration: 1, })
             gsap.to(sphereRef.current.position, { y: innerHeight * .38, ease: "power2.inOut", duration: 1, })
             gsap.to(sphereRef.current.material.uniforms.uWhite, { value: .75, duration: 1, ease: "power2.inOut" })
+            gsap.to('.project-item', { stagger:.3,opacity: 1 ,delay:.75})
         }
     )
 
     const toggleTheme = (theme) => {
         switch (theme) {
             case "dark":
-                localStorage.setItem('theme','dark')
+                localStorage.setItem('theme', 'dark')
                 document.documentElement.classList.add("dark")
                 gsap.to(sphereRef.current.material.uniforms.uDark, { value: 0., duration: .75 })
                 gsap.to(planeRef.current.material.uniforms.uDark, { value: 0., duration: .75 })
                 break;
 
             case "light":
-                localStorage.setItem('theme','light')
+                localStorage.setItem('theme', 'light')
                 document.documentElement.classList.remove("dark")
                 gsap.to(sphereRef.current.material.uniforms.uDark, { value: 1., duration: .75 })
                 gsap.to(planeRef.current.material.uniforms.uDark, { value: 1., duration: .75 })
@@ -86,7 +87,7 @@ export default function Experience() {
     })
     let offsetX = 0
     let offsetY = 0
-    
+
     useFrame((gl, delta) => {
         sphereRef.current.material.uniforms.uTime.value += delta;
         planeRef.current.material.uniforms.uTime.value += delta;
